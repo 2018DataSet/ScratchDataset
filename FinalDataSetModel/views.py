@@ -137,8 +137,23 @@ def ProcessModel1Trans(request):
     #     object.loc = b.loc
     #     object.time = b.time
     #     object.save()
-    return HttpResponse(str(ProductionProcessProductionListforaddblock.objects.count()) + str('s/c') + str(
-        ProcessModel1.objects.count()))
+    count=ProductionProcessProductionListfordelblock.objects.all().count()
+    count += ProductionProcessProductionListforaddblock.objects.all().count()
+    count += ProductionProcessProductionListfordelspr.objects.all().count()
+    count += ProductionProcessProductionListforspr.objects.all().count()
+    count += ProductionProcessProductionListforsound.objects.all().count()
+    count += ProductionProcessProductionListfordelsnd.objects.all().count()
+    count += ProductionProcessProductionListforbackdrop.objects.all().count()
+    count += ProductionProcessProductionListfordelbac.objects.all().count()
+    count += ProductionProcessProductionListforcostume.objects.all().count()
+    count += ProductionProcessProductionListfordelcos.objects.all().count()
+    return HttpResponse(str(count))
+
+    # return HttpResponse(str(ProductionProcessProductionListforaddblock.objects.count()) + str('s/c') + str(
+    #     ProcessModel1.objects.count()))
+
+
+
 
 
 """
