@@ -22,66 +22,66 @@ test10
 
 
 def ProcessModel3Trans(request):
-    bb = ProductionProcessProductionListforbackdrop.objects.all()[:1000]
-    for b in bb:
-        object = ProcessModel3()
-        object.production = ProductionModel.objects.get(id=b.productions_id)
-        object.op_type = b.addbac_add
-        object.obj_type = b.addbac_odd
-        object.obj_name = b.addbac_name
-        object.obj_from = b.addbac_from
-        object.time = b.addbac_time
-        object.save()
-    bb1 = ProductionProcessProductionListfordelbac.objects.all()[:1000]
-    for b1 in bb1:
-        object1 = ProcessModel3()
-        object1.production = ProductionModel.objects.get(id=b1.productions_id)
-        object1.op_type = b1.delbac_del
-        object1.obj_type = b1.delbac_odd
-        object1.obj_name = b1.delbac_name
-        object1.obj_from = b1.delbac_from
-        object1.time = b1.delbac_time
-        object1.save()
-    bb2 = ProductionProcessProductionListforsound.objects.all()[:1000]
-    for b2 in bb2:
-        object2 = ProcessModel3()
-        object2.production = ProductionModel.objects.get(id=b2.productions_id)
-        object2.op_type = b2.addsnd_add
-        object2.obj_type = b2.addsnd_odd
-        object2.obj_name = b2.addsnd_name
-        object2.obj_from = b2.addsnd_from
-        object2.time = b2.addsnd_time
-        object2.save()
-    bb3 = ProductionProcessProductionListfordelsnd.objects.all()[:1000]
-    for b3 in bb3:
-        object3 = ProcessModel3()
-        object3.production = ProductionModel.objects.get(id=b3.productions_id)
-        object3.op_type = b3.delsnd_del
-        object3.obj_type = b3.delsnd_odd
-        object3.obj_name = b3.delsnd_name
-        object3.obj_from = b3.delsnd_from
-        object3.time = b3.delsnd_time
-        object3.save()
-    bb4 = ProductionProcessProductionListforcostume.objects.all()[:1000]
-    for b4 in bb4:
-        object4 = ProcessModel3()
-        object4.production = ProductionModel.objects.get(id=b4.productions_id)
-        object4.op_type = b4.addcos_add
-        object4.obj_type = b4.addcos_odd
-        object4.obj_name = b4.addcos_name
-        object4.obj_from = b4.addcos_from
-        object4.time = b4.addcos_time
-        object4.save()
-    bb5 = ProductionProcessProductionListfordelcos.objects.all()[:1000]
-    for b5 in bb5:
-        object5 = ProcessModel3()
-        object5.production = ProductionModel.objects.get(id=b5.productions_id)
-        object5.op_type = b5.delcos_del
-        object5.obj_type = b5.delcos_odd
-        object5.obj_name = b5.delcos_name
-        object5.obj_from = b5.delcos_from
-        object5.time = b5.delcos_time
-        object5.save()
+    # bb = ProductionProcessProductionListforbackdrop.objects.all()
+    # for b in bb:
+    #     object = ProcessModel3()
+    #     object.production = ProductionModel.objects.get(id=b.productions_id)
+    #     object.op_type = b.addbac_add
+    #     object.obj_type = b.addbac_odd
+    #     object.obj_name = b.addbac_name
+    #     object.obj_from = b.addbac_from
+    #     object.time = b.addbac_time
+    #     object.save()
+    # bb1 = ProductionProcessProductionListfordelbac.objects.all()
+    # for b1 in bb1:
+    #     object1 = ProcessModel3()
+    #     object1.production = ProductionModel.objects.get(id=b1.productions_id)
+    #     object1.op_type = b1.delbac_del
+    #     object1.obj_type = b1.delbac_odd
+    #     object1.obj_name = b1.delbac_name
+    #     object1.obj_from = b1.delbac_from
+    #     object1.time = b1.delbac_time
+    #     object1.save()
+    # bb2 = ProductionProcessProductionListforsound.objects.all()
+    # for b2 in bb2:
+    #     object2 = ProcessModel3()
+    #     object2.production = ProductionModel.objects.get(id=b2.productions_id)
+    #     object2.op_type = b2.addsnd_add
+    #     object2.obj_type = b2.addsnd_odd
+    #     object2.obj_name = b2.addsnd_name
+    #     object2.obj_from = b2.addsnd_from
+    #     object2.time = b2.addsnd_time
+    #     object2.save()
+    # bb3 = ProductionProcessProductionListfordelsnd.objects.all()
+    # for b3 in bb3:
+    #     object3 = ProcessModel3()
+    #     object3.production = ProductionModel.objects.get(id=b3.productions_id)
+    #     object3.op_type = b3.delsnd_del
+    #     object3.obj_type = b3.delsnd_odd
+    #     object3.obj_name = b3.delsnd_name
+    #     object3.obj_from = b3.delsnd_from
+    #     object3.time = b3.delsnd_time
+    #     object3.save()
+    # bb4 = ProductionProcessProductionListforcostume.objects.all()
+    # for b4 in bb4:
+    #     object4 = ProcessModel3()
+    #     object4.production = ProductionModel.objects.get(id=b4.productions_id)
+    #     object4.op_type = b4.addcos_add
+    #     object4.obj_type = b4.addcos_odd
+    #     object4.obj_name = b4.addcos_name
+    #     object4.obj_from = b4.addcos_from
+    #     object4.time = b4.addcos_time
+    #     object4.save()
+    # bb5 = ProductionProcessProductionListfordelcos.objects.all()
+    # for b5 in bb5:
+    #     object5 = ProcessModel3()
+    #     object5.production = ProductionModel.objects.get(id=b5.productions_id)
+    #     object5.op_type = b5.delcos_del
+    #     object5.obj_type = b5.delcos_odd
+    #     object5.obj_name = b5.delcos_name
+    #     object5.obj_from = b5.delcos_from
+    #     object5.time = b5.delcos_time
+    #     object5.save()
     return HttpResponse(str(ProductionProcessProductionListforbackdrop.objects.count()) + str('s/c') + str(
         ProcessModel3.objects.count()))
 
@@ -92,7 +92,7 @@ test9
 
 
 def ProcessModel2Trans(request):
-    # bb = ProductionProcessProductionListforspr.objects.all()[:1000]
+    # bb = ProductionProcessProductionListforspr.objects.all()
     # for b in bb:
     #     object = ProcessModel2()
     #     object.production = ProductionModel.objects.get(id=b.productions_id)
@@ -101,7 +101,7 @@ def ProcessModel2Trans(request):
     #     object.spr_from = b.addspr_from
     #     object.time = b.addspr_time
     #     object.save()
-    # bb1 = ProductionProcessProductionListfordelspr.objects.all()[:1000]
+    # bb1 = ProductionProcessProductionListfordelspr.objects.all()
     # for b1 in bb1:
     #     object1 = ProcessModel2()
     #     object1.production = ProductionModel.objects.get(id=b1.productions_id)
@@ -110,7 +110,9 @@ def ProcessModel2Trans(request):
     #     object1.spr_from = b1.delspr_from
     #     object1.time = b1.delspr_time
     #     object1.save()
-    return HttpResponse(str(ProductionProcessProductionListforspr.objects.count()) + str('s/c') + str(
+    return HttpResponse(str(
+        ProductionProcessProductionListforspr.objects.count() + ProductionProcessProductionListfordelspr.objects.count()) + str(
+        's/c') + str(
         ProcessModel2.objects.count()))
 
 
@@ -120,7 +122,7 @@ test8
 
 
 def ProcessModel1Trans(request):
-    # bb1 = ProductionProcessProductionListfordelblock.objects.all()[:1000]
+    # bb1 = ProductionProcessProductionListfordelblock.objects.all()
     # for b1 in bb1:
     #     object1 = ProcessModel1()
     #     object1.production = ProductionModel.objects.get(id=b1.productions_id)
@@ -128,7 +130,7 @@ def ProcessModel1Trans(request):
     #     object1.op = b1.del_op
     #     object1.time = b1.del_time
     #     object1.save()
-    # bb = ProductionProcessProductionListforaddblock.objects.all()[:1000]
+    # bb = ProductionProcessProductionListforaddblock.objects.all()
     # for b in bb:
     #     object = ProcessModel1()
     #     object.production = ProductionModel.objects.get(id=b.productions_id)
@@ -137,23 +139,9 @@ def ProcessModel1Trans(request):
     #     object.loc = b.loc
     #     object.time = b.time
     #     object.save()
-    count=ProductionProcessProductionListfordelblock.objects.all().count()
-    count += ProductionProcessProductionListforaddblock.objects.all().count()
-    count += ProductionProcessProductionListfordelspr.objects.all().count()
-    count += ProductionProcessProductionListforspr.objects.all().count()
-    count += ProductionProcessProductionListforsound.objects.all().count()
-    count += ProductionProcessProductionListfordelsnd.objects.all().count()
-    count += ProductionProcessProductionListforbackdrop.objects.all().count()
-    count += ProductionProcessProductionListfordelbac.objects.all().count()
-    count += ProductionProcessProductionListforcostume.objects.all().count()
-    count += ProductionProcessProductionListfordelcos.objects.all().count()
-    return HttpResponse(str(count))
 
-    # return HttpResponse(str(ProductionProcessProductionListforaddblock.objects.count()) + str('s/c') + str(
-    #     ProcessModel1.objects.count()))
-
-
-
+    return HttpResponse(str(ProductionProcessProductionListforaddblock.objects.count()+ProductionProcessProductionListfordelblock.objects.count()) + str('s/c') + str(
+        ProcessModel1.objects.count()))
 
 
 """
@@ -163,24 +151,24 @@ test7
 
 def ProductionModelSb2ProfileTrans(request):
     # ProductionModelSb2Profile.objects.all().delete()
-    pp = ScratchApiProductionProfile.objects.all()
-    for p in pp:
-        object = ProductionModelSb2Profile()
-        object.production_id = ProductionModel.objects.get(id=p.production_id_id)
-        object.motion_num = p.motion_num
-        object.looklike_num = p.looklike_num
-        object.sounds_num = p.sounds_num
-        object.draw_num = p.draw_num
-        object.event_num = p.event_num
-        object.control_num = p.control_num
-        object.sensor_num = p.sensor_num
-        object.operate_num = p.operate_num
-        object.more_num = p.more_num
-        object.data_num = p.data_num
-        object.sprite_num = p.sprite_num
-        object.backdrop_num = p.backdrop_num
-        object.snd_num = p.snd_num
-        object.save()
+    # pp = ScratchApiProductionProfile.objects.all()
+    # for p in pp:
+    #     object = ProductionModelSb2Profile()
+    #     object.production_id = ProductionModel.objects.get(id=p.production_id_id)
+    #     object.motion_num = p.motion_num
+    #     object.looklike_num = p.looklike_num
+    #     object.sounds_num = p.sounds_num
+    #     object.draw_num = p.draw_num
+    #     object.event_num = p.event_num
+    #     object.control_num = p.control_num
+    #     object.sensor_num = p.sensor_num
+    #     object.operate_num = p.operate_num
+    #     object.more_num = p.more_num
+    #     object.data_num = p.data_num
+    #     object.sprite_num = p.sprite_num
+    #     object.backdrop_num = p.backdrop_num
+    #     object.snd_num = p.snd_num
+    #     object.save()
     return HttpResponse(
         str(ScratchApiProductionProfile.objects.count()) + str('s/c') + str(ProductionModelSb2Profile.objects.count()))
 
@@ -254,6 +242,16 @@ test5
 
 
 def KnowModel1Trans(request):
+    # 计算学习次数
+    # cc = LearnModel.objects.all()
+    # for c in cc:
+    #     if KnowModel1.objects.filter(lesson_id=c.lesson_id, chapter_id=c.chapter_id).exists():
+    #         chapter = KnowModel1.objects.get(chapter_id=c.chapter_id, lesson_id=c.lesson_id)
+    #         chapter.learn_times += 1
+    #         chapter.save()
+    #     else:
+    #         print(c.lesson_id)
+
     # KnowModel1.objects.all().delete()
     # 获得章节信息
     # cc = CourseChapter.objects.all()
@@ -404,29 +402,29 @@ def StudentModelTrans(request):
     #     #         u.save()
 
     # 创作次数、创作列表、改编次数、改编树
-    uu = StudentModel.objects.all()
-    for u in uu:
-        if ProductionModel.objects.filter(author=u).exists():
-            pp = ProductionModel.objects.filter(author=u)
-            for p in pp:
-                if u.creativetimes:
-                    u.creativetimes += 1
-                else:
-                    u.creativetimes = 1
-                if u.production_list:
-                    u.production_list = u.production_list + '/' + str(p.id)
-                else:
-                    u.production_list = '/' + str(p.id)
-                if p.parent_id:
-                    if u.remixtimes:
-                        u.remixtimes += 1
-                    else:
-                        u.remixtimes = 1
-                    if u.remix_tree:
-                        u.remix_tree = u.remix_tree + '/' + str(p.parent_id) + '->' + str(p.id)
-                    else:
-                        u.remix_tree = '/' + str(p.parent_id) + '->' + str(p.id)
-            u.save()
+    # uu = StudentModel.objects.all()
+    # for u in uu:
+    #     if ProductionModel.objects.filter(author=u).exists():
+    #         pp = ProductionModel.objects.filter(author=u)
+    #         for p in pp:
+    #             if u.creativetimes:
+    #                 u.creativetimes += 1
+    #             else:
+    #                 u.creativetimes = 1
+    #             if u.production_list:
+    #                 u.production_list = u.production_list + '/' + str(p.id)
+    #             else:
+    #                 u.production_list = '/' + str(p.id)
+    #             if p.parent_id:
+    #                 if u.remixtimes:
+    #                     u.remixtimes += 1
+    #                 else:
+    #                     u.remixtimes = 1
+    #                 if u.remix_tree:
+    #                     u.remix_tree = u.remix_tree + '/' + str(p.parent_id) + '->' + str(p.id)
+    #                 else:
+    #                     u.remix_tree = '/' + str(p.parent_id) + '->' + str(p.id)
+    #         u.save()
 
     # 获得学生信息
     # users = ScratchApiUser.objects.all()
@@ -483,7 +481,6 @@ def CTModelTrans(request):
     #     else:
     #         pass
     return HttpResponse(str(ScratchApiAntlrscore.objects.count()) + str('s/c') + str(CTModel.objects.count()))
-    # return HttpResponse(str(ScratchApiProduction.objects.count()) + str('s/c') + str(ProductionModel.objects.count()))
 
 
 """
@@ -503,4 +500,21 @@ def LearnModelTrans(request):
     #     object.end_time = item.end_time
     #     object.learn_time = (item.end_time - item.start_time).seconds
     #     object.save()
+
+    # total_time = 0
+    # objects = LearnModel.objects.all()
+    # for object in objects:
+    #     total_time += object.learn_time
+    # user_count = LearnModel.objects.all().values('username').count()
+    # users = LearnModel.objects.all().values('username').distinct()
+    # for user in users:
+    #     rr = LearnModel.objects.filter(username=user['username'])
+    #     time = 0
+    #     for r in rr:
+    #         time += r.learn_time
+    #     s = LearningTimeStatistic.objects.create(username=user['username'], total_learn_time=time)
+
+    # user_count = ProductionModel.objects.all().values('author_id').distinct().count()
+    # total_pro = ProductionModel.objects.all().count()
+    # user=StudentModel.objects.all().count()
     return HttpResponse(str(CourseUserbehaviorlesson.objects.count()) + str('s/c') + str(LearnModel.objects.count()))

@@ -19,10 +19,10 @@ class StudentModel(models.Model):
     phone_number = models.CharField(max_length=15, verbose_name='手机号', blank=True, null=True)
     registration_time = models.DateTimeField(verbose_name='注册时间', blank=True, null=True)
 
-    coursetimes = models.IntegerField(verbose_name='学习的课程数', blank=True, null=True,default=0)
-    favtimes = models.IntegerField(verbose_name='收藏的作品数', blank=True, null=True,default=0)
-    creativetimes = models.IntegerField(verbose_name='创作数', blank=True, null=True,default=0)
-    remixtimes = models.IntegerField(verbose_name='改编数', blank=True, null=True,default=0)
+    coursetimes = models.IntegerField(verbose_name='学习的课程数', blank=True, null=True, default=0)
+    favtimes = models.IntegerField(verbose_name='收藏的作品数', blank=True, null=True, default=0)
+    creativetimes = models.IntegerField(verbose_name='创作数', blank=True, null=True, default=0)
+    remixtimes = models.IntegerField(verbose_name='改编数', blank=True, null=True, default=0)
     course_list = models.TextField(verbose_name='学习的课程列表', blank=True, null=True)
     production_list = models.TextField(verbose_name='创作作品列表', blank=True, null=True)
     fav_list = models.TextField(verbose_name='创作收藏列表', blank=True, null=True)
@@ -94,6 +94,7 @@ class KnowModel1(models.Model):
     content = models.TextField(verbose_name='知识点内容')
     audio = models.CharField(max_length=100, verbose_name='音频描述', blank=True, null=True)
     create_time = models.DateTimeField(verbose_name='创建时间')
+    learn_times = models.IntegerField(verbose_name='学习次数', default=0)
 
     class Meta:
         managed = True
@@ -190,9 +191,11 @@ class ProcessModel3(models.Model):
     obj_type = models.CharField(max_length=100, verbose_name='资源类型', blank=True, null=True)
     obj_name = models.CharField(max_length=100, verbose_name='资源名称', blank=True, null=True)
     obj_from = models.CharField(max_length=100, verbose_name='资源来源', blank=True, null=True)
-    time = models.DateTimeField(verbose_name='操作时间', blank=True, null=True)
+    time = models.DateTimeField(verbose_name='操作的时间', blank=True, null=True)
     production = models.ForeignKey(ProductionModel, verbose_name='作品ID', blank=True, null=True)
 
     class Meta:
         managed = True
         db_table = 'DataSet_ProcessModel_backdrop_sound_costume'
+
+
